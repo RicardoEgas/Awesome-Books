@@ -12,14 +12,14 @@ const formSubmit = document.getElementById('submit-form');
 
 function getBooks(){
 
-    const author = document.getElementById('author');
-    const title = document.getElementById('title');
+    const author = document.getElementById('author').value;
+    const title = document.getElementById('title').value;
     const newBook = new Books(title, author);
     console.log(newBook);
 
    }
 
-buttonAdd.addEventListener('submit',getBooks());
+buttonAdd.addEventListener('click',getBooks);
 
 
 
