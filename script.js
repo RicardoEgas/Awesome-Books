@@ -7,7 +7,7 @@ class Books {
 
 
 const buttonAdd = document.querySelector('.button-add');
-const formSubmit = document.getElementById('submit-form');
+const displayBooks = document.getElementById('books-list');
 
 
 function getBooks(){
@@ -15,9 +15,14 @@ function getBooks(){
     const author = document.getElementById('author').value;
     const title = document.getElementById('title').value;
     const newBook = new Books(title, author);
-    console.log(newBook);
-
+    
+    showBooks();
    }
+
+function showBooks () {
+    
+    displayBooks.insertAdjacentHTML("afterbegin", `<p>${title}</p> <p>${author}</p> <button class="remove-btn">remove</button>`)
+}
 
 buttonAdd.addEventListener('click',getBooks);
 
