@@ -9,6 +9,7 @@ class Books {
 const buttonAdd = document.querySelector('.button-add');
 const displayBooks = document.getElementById('books-list');
 const removeBtn = document.querySelector('.remove-btn');
+const bookShelf = [];
 
 
 function getBooks(){
@@ -21,6 +22,8 @@ function showBooks () {
     const author = document.getElementById('author').value;
     const title = document.getElementById('title').value;
     const newBook = new Books(title, author);
+    bookShelf.push(newBook);
+    console.log(bookShelf);
     
     displayBooks.insertAdjacentHTML("afterbegin", `<p>${newBook.title}</p> <p>${newBook.author}</p> <button class="remove-btn">remove</button>`)
 }
@@ -29,5 +32,12 @@ buttonAdd.addEventListener('click', getBooks);
 
 
 
+document.addEventListener('click', (e) => {
+  const target = e.target.closest('.remove-btn');
+
+  if (target) {
+    displayBooks.innerHTML = '';
+  }
+})
 
 
