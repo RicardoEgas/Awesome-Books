@@ -5,18 +5,22 @@ class Books {
     }
 }
 
-const authors = document.getElementById('author').value;
-const titles = document.getElementById('title').value;
+
 const buttonAdd = document.querySelector('.button-add');
 const formSubmit = document.getElementById('submit-form');
 
+
 function getBooks(){
-    titles = this.title;
-    authors = this.author;
+
+    const author = document.getElementById('author');
+    const title = document.getElementById('title');
+    const newBook = new Books(title, author);
+    console.log(newBook);
+
    }
 
+buttonAdd.addEventListener('submit',getBooks());
 
-buttonAdd.addEventListener('submit',getBooks);
 
 
 
