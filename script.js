@@ -30,7 +30,7 @@ function storeDelete(title) {
   const books = storeGet();
   const index = books.findIndex((book) => book.title === title);
   if (index !== -1) {
-    books.splice(index, 1);
+    books.slice(index, 1);
     localStorage.setItem('books', JSON.stringify(books));
   }
 }

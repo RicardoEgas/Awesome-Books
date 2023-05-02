@@ -58,7 +58,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [My Porfolio] <a name="about-project"></a>
+# 📖 [Awesome Books] <a name="about-project"></a>
 
 
 
@@ -186,6 +186,8 @@ GitHub Pages
 
 👤 **Yakub Ojo**
 - GitHub: [@githubhandle](https://github.com/Yakub-Ojo)
+- Twitter: [@twitterhandle](https://twitter.com/Yakubojodev)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 
 
