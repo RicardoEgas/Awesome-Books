@@ -29,14 +29,8 @@ const bookShelf = [];
         localStorage.setItem('books', JSON.stringify(books));
       }
   
-
-
-     
     let books = storeGet();
     books.forEach((book) => displayBooks.insertAdjacentHTML("afterbegin", `<div><p>${book.title}</p> <p>${book.author}</p> <button class="remove-btn">remove</button></div>`));
-
-   
-   
 
 function showBooks () {
     const author = document.getElementById('author').value;
