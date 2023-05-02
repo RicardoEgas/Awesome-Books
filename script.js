@@ -25,7 +25,7 @@ function showBooks () {
     bookShelf.push(newBook);
     console.log(bookShelf);
     
-    displayBooks.insertAdjacentHTML("afterbegin", `<p>${newBook.title}</p> <p>${newBook.author}</p> <button class="remove-btn">remove</button>`)
+    displayBooks.insertAdjacentHTML("afterbegin", `<div><p>${newBook.title}</p> <p>${newBook.author}</p> <button class="remove-btn">remove</button></div>`)
 }
 
 buttonAdd.addEventListener('click', getBooks);
@@ -36,7 +36,7 @@ document.addEventListener('click', (e) => {
   const target = e.target.closest('.remove-btn');
 
   if (target) {
-    displayBooks.innerHTML = '';
+    target.parentElement.remove();
   }
 })
 
