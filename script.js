@@ -31,12 +31,12 @@ const bookShelf = [];
   
 
 
-function getBooks(){
      
-    storeGet();
+    let books = storeGet();
+    books.forEach((book) => displayBooks.insertAdjacentHTML("afterbegin", `<div><p>${book.title}</p> <p>${book.author}</p> <button class="remove-btn">remove</button></div>`));
 
-    showBooks();
-   }
+   
+   
 
 function showBooks () {
     const author = document.getElementById('author').value;
@@ -48,7 +48,7 @@ function showBooks () {
     displayBooks.insertAdjacentHTML("afterbegin", `<div><p>${newBook.title}</p> <p>${newBook.author}</p> <button class="remove-btn">remove</button></div>`)
 }
 
-buttonAdd.addEventListener('click', getBooks);
+buttonAdd.addEventListener('click', showBooks);
 
 
 
