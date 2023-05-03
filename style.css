@@ -25,7 +25,7 @@ body {
   background-color: lightgray;
 }
 
-.book-info p{
+.book-info p {
   display: inline;
 }
 
@@ -33,7 +33,6 @@ body {
   background-color: #fff;
   box-shadow: 2px 2px 3px 1px #000;
   margin-right: 0.5rem;
-
 }
 
 hr {
