@@ -36,7 +36,14 @@ function storeDelete(title) {
 }
 
 const books = storeGet();
-books.forEach((book) => displayBooks.insertAdjacentHTML('afterbegin', `<div><p>${book.title}</p> <p>${book.author}</p> <button class="remove-btn">remove</button></div>`));
+books.forEach((book) => displayBooks.insertAdjacentHTML('afterbegin', 
+`<div class="book-item">
+  <div class="book-info">
+    <p>${book.title}</p> 
+    <p> by ${book.author}</p> 
+  </div>
+  <button class="remove-btn">remove</button>
+  </div>`));
 
 function showBooks() {
   const author = document.getElementById('author').value;
@@ -48,7 +55,14 @@ function showBooks() {
     return;
   }
 
-  displayBooks.insertAdjacentHTML('afterbegin', `<div><p>${newBook.title}</p> <p>${newBook.author}</p> <button class="remove-btn">remove</button></div>`);
+  displayBooks.insertAdjacentHTML('afterbegin', 
+  `<div class="book-item">
+    <div class="book-info">
+      <p>${newBook.title}</p> 
+      <p> by ${newBook.author}</p>
+    </div>
+    <button class="remove-btn">remove</button>
+  </div>`);
   bookShelf.push(newBook);
   storeAdd(newBook);
 }
@@ -57,7 +71,8 @@ buttonAdd.addEventListener('click', showBooks);
 
 document.addEventListener('click', (e) => {
   const target = e.target.closest('.remove-btn');
-  const title = target.previousElementSibling.previousElementSibling.textContent;
+  const title = target.parentElement.firstElementChild.firstElementChild.textContent;
+  console.log(title);
 
   if (target) {
     target.parentElement.remove();
