@@ -4,12 +4,12 @@ class Books {
   constructor(title, author) {
     this.title = title;
     this.author = author;
+    this.bookShelf = [];
   }
 }
 
 const buttonAdd = document.querySelector('.button-add');
 const displayBooks = document.getElementById('books-list');
-const bookShelf = [];
 
 // Storage classes
 class Store {
@@ -73,7 +73,7 @@ class Interaction {
       </div>
       <button class="remove-btn">remove</button>
     </div>`);
-    bookShelf.push(newBook);
+    this.bookShelf.push(newBook);
     Store.storeAdd(newBook);
   }
 
@@ -91,7 +91,7 @@ class Interaction {
   }
 }
 
-//Interaction functions
+// Interaction functions
 
 Interaction.getBooks();
 
