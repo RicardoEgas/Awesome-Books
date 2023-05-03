@@ -30,7 +30,7 @@ function storeDelete(title) {
   const books = storeGet();
   const index = books.findIndex((book) => book.title === title);
   if (index !== -1) {
-    books.slice(index, 1);
+    books.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(books));
   }
 }
@@ -42,10 +42,15 @@ function showBooks() {
   const author = document.getElementById('author').value;
   const title = document.getElementById('title').value;
   const newBook = new Books(title, author);
-  bookShelf.push(newBook);
-  storeAdd(newBook);
+
+  if (!title || !author) {
+    alert('Please enter a valid title and author');
+    return;
+  }
 
   displayBooks.insertAdjacentHTML('afterbegin', `<div><p>${newBook.title}</p> <p>${newBook.author}</p> <button class="remove-btn">remove</button></div>`);
+  bookShelf.push(newBook);
+  storeAdd(newBook);
 }
 
 buttonAdd.addEventListener('click', showBooks);
