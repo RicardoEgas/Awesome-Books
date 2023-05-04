@@ -61,7 +61,7 @@ class Interaction {
     const newBook = new Books(title, author);
 
     if (!title || !author) {
-     {
+      {
         const error = document.querySelector('.add-cont');
         error.insertAdjacentHTML('afterend',
           '<p class="error-message">Please, insert the title and author</p>');
@@ -99,7 +99,7 @@ class Interaction {
 
 Interaction.getBooks();
 
-Interaction.showBooks();
+//Interaction.showBooks();
 
 buttonAdd.addEventListener('click', Interaction.showBooks);
 
@@ -135,4 +135,3 @@ contact.addEventListener('click', () => {
 });
 
 /* eslint-disable max-classes-per-file */
-

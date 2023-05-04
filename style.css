@@ -65,6 +65,13 @@ input {
   height: 2.5rem;
   width: 4rem;
   font-weight: 700;
+  transition: 0.1s;
+}
+
+.button-add:hover {
+  cursor: pointer;
+  background-color: #3a3d44e8;
+  color: #fff;
 }
 
 .add-cont {
@@ -136,6 +143,10 @@ footer {
   text-align: left;
   width: 95%;
   padding: 0 1rem;
+}
+
+footer h4 {
+  word-spacing: 1rem;
 }
 
 .addBook {
