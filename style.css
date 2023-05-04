@@ -151,3 +151,7 @@ footer {
 .showBooks {
   display: block;
 }
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
