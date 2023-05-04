@@ -65,3 +65,8 @@ input {
   align-items: center;
   position: relative;
 }
+
+.error-message {
+  padding-top: 1rem;
+  color: red;
+}

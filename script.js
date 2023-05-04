@@ -4,12 +4,12 @@ class Books {
   constructor(title, author) {
     this.title = title;
     this.author = author;
-    this.bookShelf = [];
   }
 }
 
 const buttonAdd = document.querySelector('.button-add');
 const displayBooks = document.getElementById('books-list');
+const bookShelf = [];
 
 // Storage classes
 class Store {
@@ -61,7 +61,11 @@ class Interaction {
     const newBook = new Books(title, author);
 
     if (!title || !author) {
-      alert('Please enter a valid title and author');
+      if (!title || !author) {
+        const error = document.querySelector('.add-cont');
+         error.insertAdjacentHTML('afterend',
+        `<p class="error-message">Please, insert the title and author</p>`);
+        }
       return;
     }
 
@@ -73,7 +77,7 @@ class Interaction {
       </div>
       <button class="remove-btn">remove</button>
     </div>`);
-    this.bookShelf.push(newBook);
+    bookShelf.push(newBook);
     Store.storeAdd(newBook);
   }
 
