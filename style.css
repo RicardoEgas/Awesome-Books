@@ -122,11 +122,8 @@ nav {
 .contact-container {
   text-align: center;
 }
-.contact-list {
-  list-style-type: armenian;
-}
 
-.contact-list li {
+.contact-list {
   display: inline-block;
   text-align: left;
 }
@@ -146,9 +143,11 @@ footer {
 }
 
 .Info {
-  display: block;
+  display: none;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .showBooks {
-  display: none;
+  display: block;
 }
