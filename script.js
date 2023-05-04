@@ -63,9 +63,9 @@ class Interaction {
     if (!title || !author) {
       if (!title || !author) {
         const error = document.querySelector('.add-cont');
-         error.insertAdjacentHTML('afterend',
-        `<p class="error-message">Please, insert the title and author</p>`);
-        }
+        error.insertAdjacentHTML('afterend',
+          '<p class="error-message">Please, insert the title and author</p>');
+      }
       return;
     }
 
