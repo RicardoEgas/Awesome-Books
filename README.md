@@ -187,7 +187,7 @@ GitHub Pages
 👤 **Yakub Ojo**
 - GitHub: [@githubhandle](https://github.com/Yakub-Ojo)
 - Twitter: [@twitterhandle](https://twitter.com/Yakubojodev)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/yakub-ojo-6b4285158/)
 
 
 

@@ -1,3 +1,72 @@
 body {
   margin: 0;
 }
+
+.book-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#books-list {
+  display: grid;
+  border: 2px solid #272a31;
+  width: 80%;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0 0.2rem 0.2rem;
+}
+
+.book-item:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.book-info p {
+  display: inline;
+}
+
+.remove-btn {
+  background-color: #fff;
+  box-shadow: 2px 2px 3px 1px #000;
+  margin-right: 0.5rem;
+}
+
+hr {
+  border: 1px solid rgb(0, 0, 0);
+  width: 60%;
+  margin: 1rem auto;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+input {
+  border: 2px solid #000;
+  margin-bottom: 0.5rem;
+}
+
+.button-add {
+  box-shadow: 2px 2px 3px 1px #000;
+  background-color: #fff;
+  justify-self: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: -1.5rem;
+}
+
+.add-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.error-message {
+  padding-top: 1rem;
+  color: red;
+}
