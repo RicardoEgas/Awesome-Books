@@ -70,3 +70,57 @@ input {
   padding-top: 1rem;
   color: red;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #000;
+  margin: 1rem 1rem 0.5rem;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li {
+  border-right: 1px solid #000;
+  padding: 0 1rem;
+}
+
+.nav-list li:nth-child(3) {
+  border-right: none;
+  padding-right: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000;
+}
+
+.date {
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.contact {
+  text-align: center;
+}
+
+contact p {
+  text-align: left;
+}
+
+.contact-list {
+  text-align: left;
+}
+
+footer {
+  border: 2px solid #000;
+  margin: 1rem;
+  text-align: left;
+  width: 95%;
+  padding: 0 1rem;
+}

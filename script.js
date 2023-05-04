@@ -105,4 +105,9 @@ buttonAdd.addEventListener('click', Interaction.showBooks);
 
 Interaction.remove();
 
+// Navigation Functions
+const date = document.querySelector('.date');
+date.innerHTML = new Date();
+
 /* eslint-disable max-classes-per-file */
+
