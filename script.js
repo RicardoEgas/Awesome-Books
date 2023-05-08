@@ -61,7 +61,7 @@ class Interaction {
     const newBook = new Books(title, author);
 
     if (!title || !author) {
-      if (!title || !author) {
+      {
         const error = document.querySelector('.add-cont');
         error.insertAdjacentHTML('afterend',
           '<p class="error-message">Please, insert the title and author</p>');
@@ -99,10 +99,39 @@ class Interaction {
 
 Interaction.getBooks();
 
-Interaction.showBooks();
+// Interaction.showBooks();
 
 buttonAdd.addEventListener('click', Interaction.showBooks);
 
 Interaction.remove();
+
+// Navigation Functions
+const date = document.querySelector('.date');
+date.innerHTML = new Date();
+
+const list = document.getElementById('list-item');
+const add = document.getElementById('add-item');
+const contact = document.getElementById('contact-item');
+const showBook = document.querySelector('.showBooks');
+const addBook = document.querySelector('.addBook');
+const info = document.querySelector('.Info');
+
+list.addEventListener('click', () => {
+  showBook.style.display = 'block';
+  addBook.style.display = 'none';
+  info.style.display = 'none';
+});
+
+add.addEventListener('click', () => {
+  showBook.style.display = 'none';
+  addBook.style.display = 'block';
+  info.style.display = 'none';
+});
+
+contact.addEventListener('click', () => {
+  showBook.style.display = 'none';
+  addBook.style.display = 'none';
+  info.style.display = 'block';
+});
 
 /* eslint-disable max-classes-per-file */
